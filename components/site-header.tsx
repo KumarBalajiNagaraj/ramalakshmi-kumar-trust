@@ -29,7 +29,7 @@ export function SiteHeader() {
                 Ramalakshmi Kumar Trust
               </span>
               <span className="text-[10px] text-[#858483] tracking-widest uppercase">
-                Nurturing Potential
+                Reg. No. BK-4/184/2025
               </span>
             </div>
           </Link>

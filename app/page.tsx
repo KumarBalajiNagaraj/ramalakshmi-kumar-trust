@@ -33,6 +33,9 @@ export default function Home() {
                 <p className="mt-3 text-base md:text-lg text-[#858483] font-playfair italic">
                   Nurturing Potential. Honoring a Legacy.
                 </p>
+                <p className="mt-1 text-xs text-[#858483] tracking-widest uppercase">
+                  Reg. No. BK-4/184/2025
+                </p>
               </div>
               {/* Tagline */}
               <p className="max-w-xl text-sm md:text-base text-[#434343] leading-relaxed">
@@ -380,20 +383,37 @@ export default function Home() {
               <p className="mt-4 text-sm text-[#858483]">— Smt. Ramalakshmi Kumar</p>
 
               {/* Founder credit */}
-              <div className="mt-8 inline-flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-6 py-4">
-                <Image
-                  src="/parrot_logo.png"
-                  alt="Trust Logo"
-                  width={36}
-                  height={36}
-                  className="h-9 w-auto mb-1"
-                />
+              {/* UPI Quick Pay */}
+              <div className="mt-8 inline-flex flex-col sm:flex-row items-center gap-6 rounded-xl border border-white/10 bg-white/5 px-6 py-5">
+                <div className="text-center">
+                  <Image
+                    src="/upi_qr.jpg"
+                    alt="UPI QR Code — Ramalakshmi K"
+                    width={110}
+                    height={110}
+                    className="rounded-xl mx-auto"
+                  />
+                  <p className="mt-1.5 text-xs text-[#858483]">Scan to pay instantly</p>
+                </div>
+                <div className="text-left">
+                  <p className="text-xs text-[#858483] uppercase tracking-widest mb-1">UPI ID</p>
+                  <p className="font-mono text-sm font-semibold text-white bg-white/10 rounded-lg px-3 py-2">
+                    ramalakshmikumar65@okhdfcbank
+                  </p>
+                  <p className="text-xs text-[#858483] mt-2">GPay · PhonePe · Paytm · BHIM</p>
+                  <p className="text-xs text-[#C9A84C] mt-1 font-medium">Ramalakshmi K · Trust Account</p>
+                </div>
+              </div>
+
+              {/* Founder credit */}
+              <div className="mt-5 inline-flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-6 py-3">
+                <Image src="/parrot_logo.png" alt="Trust Logo" width={30} height={30} className="h-8 w-auto mb-0.5" />
                 <p className="text-sm font-semibold text-white">Kumar B</p>
                 <p className="text-xs text-[#858483]">Retired Educator, SSN MBA Department</p>
                 <p className="text-xs text-[#C9A84C]">Managing Trustee, Ramalakshmi Kumar Trust</p>
               </div>
 
-              <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+              <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
                 <Button
                   asChild
                   size="lg"
@@ -428,9 +448,11 @@ export default function Home() {
             <span className="text-[#181818] font-medium">Kumar B</span>
             {" "}— Retired Educator, SSN MBA Department &amp; Managing Trustee
             <br />
+            <span className="text-[#858483]">Reg. No. BK-4/184/2025</span>
+            {" · "}
             <Link
               href="https://www.ramalakshmikumar.com"
-              className="text-[#C9A84C] hover:underline mt-1 inline-block"
+              className="text-[#C9A84C] hover:underline"
               target="_blank"
             >
               www.ramalakshmikumar.com
