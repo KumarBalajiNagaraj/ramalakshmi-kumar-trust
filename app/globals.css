@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ─── Ramalakshmi Kumar Trust Design Tokens ─── */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9.4%;          /* #181818 — near-black */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 9.4%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 9.4%;
+    --primary: 44 54% 54%;            /* #C9A84C — trust gold */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 42 100% 97%;         /* #FFF9EF — light gold tint */
+    --secondary-foreground: 0 0% 9.4%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 52%;     /* #858483 — muted gray */
+    --accent: 42 100% 97%;
+    --accent-foreground: 0 0% 9.4%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 0 0% 90%;               /* #E5E5E5 */
+    --input: 0 0% 90%;
+    --ring: 44 54% 54%;
+    --radius: 0.625rem;
+
+    /* ─── Brand Tokens ─── */
+    --trust-gold: #C9A84C;
+    --trust-gold-light: #FFF9EF;
+    --trust-dark: #181818;
+    --trust-gray: #434343;
+    --trust-muted: #858483;
+    --trust-border: #E5E5E5;
+  }
+
+  .dark {
+    --background: 0 0% 9.4%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 9.4%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 9.4%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 44 54% 54%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 64%;
+    --accent: 0 0% 14%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 44 54% 54%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    letter-spacing: -0.011em;
+    line-height: 1.65;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+}
+
+.font-playfair {
+  font-family: var(--font-playfair);
+}
+
+.font-lora {
+  font-family: var(--font-lora);
+}
+
+/* ─── Gold accent rule ─── */
+.gold-rule {
+  height: 1px;
+  background: var(--trust-gold);
+  opacity: 0.5;
+}
+
+/* ─── Section reveal ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
